@@ -8,7 +8,7 @@ export default function Logo({ className = '', variant = 'dark' }: LogoProps) {
   return (
     <span className={`inline-flex items-center gap-2 ${className}`}>
       <span className="grid h-9 w-9 place-items-center rounded-xl bg-brand-600 shadow-soft">
-        <span className="h-4 w-4 rounded-full border-[3px] border-white" />
+        <img src="/assets/oppus-o.svg" alt="" aria-hidden="true" className="h-4 w-auto" />
       </span>
       <span className={`text-xl font-extrabold tracking-tight ${text}`}>
         Oppus
