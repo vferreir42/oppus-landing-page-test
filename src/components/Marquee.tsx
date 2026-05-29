@@ -14,7 +14,7 @@ export default function Marquee({ items }: MarqueeProps) {
         {loop.map((item, index) => (
           <span
             key={`${item}-${index}`}
-            className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-ink-soft shadow-card"
+            className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-brand-900/5 bg-white px-4 py-2 text-sm font-medium text-ink-soft shadow-card"
           >
             <FileText className="h-4 w-4 text-brand-500" />
             {item}

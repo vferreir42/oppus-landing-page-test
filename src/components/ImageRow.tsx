@@ -19,7 +19,7 @@ export default function ImageRow({
   image,
   imageAlt,
   reverse = false,
-  glow = 'from-brand-200/60 to-indigo-200/50',
+  glow = 'from-brand-200/60 to-brand-100/40',
 }: ImageRowProps) {
   return (
     <div className="container-page grid items-center gap-10 lg:grid-cols-2 lg:gap-16">

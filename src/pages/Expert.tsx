@@ -45,7 +45,7 @@ export default function Expert() {
           title="Retrouvez les modèles de documents de vos éditeurs favoris"
           image="/assets/benefit-1.png"
           imageAlt="Modèles des Éditions Législatives et Éditions Francis Lefebvre"
-          glow="from-amber-200/50 to-rose-200/40"
+          glow="from-accent-100/60 to-brand-100/40"
           reverse
         >
           <p>
@@ -72,7 +72,7 @@ export default function Expert() {
           title="Gérez et organisez facilement vos clients, leurs salariés et leurs documents"
           image="/assets/benefit-2.png"
           imageAlt="Profils des salariés et partage de documents dans Oppus"
-          glow="from-violet-200/60 to-brand-200/40"
+          glow="from-brand-200/60 to-brand-100/40"
         >
           <p>
             Créez des profils pour les salariés de vos clients afin
@@ -92,7 +92,7 @@ export default function Expert() {
           title="Profitez d'un éditeur pensé pour les professionnels"
           image="/assets/feature-3.png"
           imageAlt="Éditeur Oppus avec formulaires intelligents"
-          glow="from-brand-200/60 to-indigo-200/40"
+          glow="from-brand-200/60 to-brand-100/40"
           reverse
         >
           <p>
@@ -106,17 +106,19 @@ export default function Expert() {
         </ImageRow>
       </Section>
 
-      {/* Conventions collectives */}
+      {/* Conventions collectives — section sombre immersive */}
       <Section className="container-page mt-24">
-        <div className="grid items-center gap-10 rounded-3xl bg-ink p-8 text-white sm:p-12 lg:grid-cols-2">
-          <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-200">
+        <div className="relative grid items-center gap-10 overflow-hidden rounded-[2rem] bg-brand-night p-8 text-white shadow-soft sm:p-12 lg:grid-cols-2">
+          <div className="pointer-events-none absolute inset-0 dot-grid-light opacity-50" />
+          <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand-400/20 blur-3xl" />
+          <div className="relative">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-brand-100 ring-1 ring-white/15">
               Conformité
             </span>
             <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
               Retrouvez toutes les conventions collectives de vos clients
             </h2>
-            <p className="mt-4 text-lg leading-relaxed text-slate-300">
+            <p className="mt-4 text-lg leading-relaxed text-brand-100/85">
               Plus de 450 synthèses de conventions collectives couvrant
               l'ensemble des thèmes pour vous assurer de la conformité de vos
               documents. Accédez facilement à l'information pertinente en cours
@@ -127,7 +129,7 @@ export default function Expert() {
             src="/assets/benefit-4.png"
             alt="450 conventions collectives couvrant tous les secteurs"
             loading="lazy"
-            className="mx-auto w-full max-w-xs animate-float"
+            className="relative mx-auto w-full max-w-xs animate-float"
           />
         </div>
       </Section>
@@ -139,7 +141,7 @@ export default function Expert() {
           title="Ne ratez plus une seule échéance"
           image="/assets/benefit-5.png"
           imageAlt="Alerte d'échéance dans le calendrier Oppus"
-          glow="from-amber-200/60 to-orange-200/40"
+          glow="from-accent-100/60 to-brand-100/40"
         >
           <p>
             Soyez alertés automatiquement des échéances principales de vos

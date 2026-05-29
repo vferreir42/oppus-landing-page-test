@@ -6,7 +6,7 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="mt-24 border-t border-slate-100 bg-slate-50">
+    <footer className="mt-24 border-t border-brand-900/5 bg-white">
       <div className="container-page grid gap-12 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <Logo />
@@ -20,22 +20,22 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wide text-ink">
+          <h4 className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-muted">
             Solutions
           </h4>
-          <ul className="mt-4 space-y-3 text-ink-muted">
+          <ul className="mt-4 space-y-3 text-ink-soft">
             <li>
-              <Link to="/expert" className="hover:text-brand-700">
+              <Link to="/expert" className="transition-colors hover:text-brand-700">
                 Oppus Expert
               </Link>
             </li>
             <li>
-              <Link to="/rh" className="hover:text-brand-700">
+              <Link to="/rh" className="transition-colors hover:text-brand-700">
                 Oppus RH
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-brand-700">
+              <Link to="/contact" className="transition-colors hover:text-brand-700">
                 Demander une démo
               </Link>
             </li>
@@ -43,17 +43,20 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wide text-ink">
+          <h4 className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-muted">
             Contact
           </h4>
-          <ul className="mt-4 space-y-3 text-ink-muted">
+          <ul className="mt-4 space-y-3 text-ink-soft">
             <li className="flex items-start gap-2">
               <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-brand-600" />
               <span>10 place des Vosges, 92400 Courbevoie</span>
             </li>
             <li className="flex items-center gap-2">
               <Mail className="h-5 w-5 shrink-0 text-brand-600" />
-              <a href="mailto:contact@oppus.fr" className="hover:text-brand-700">
+              <a
+                href="mailto:contact@oppus.fr"
+                className="transition-colors hover:text-brand-700"
+              >
                 contact@oppus.fr
               </a>
             </li>
@@ -63,7 +66,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/oppus"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-brand-700"
+                className="transition-colors hover:text-brand-700"
               >
                 LinkedIn
               </a>
@@ -72,14 +75,14 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-slate-200">
+      <div className="border-t border-brand-900/5">
         <div className="container-page flex flex-col gap-3 py-6 text-sm text-ink-muted sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} Oppus. Tous droits réservés.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-brand-700">
+            <a href="#" className="transition-colors hover:text-brand-700">
               Mentions légales
             </a>
-            <a href="#" className="hover:text-brand-700">
+            <a href="#" className="transition-colors hover:text-brand-700">
               Politique de confidentialité
             </a>
           </div>

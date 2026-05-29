@@ -25,24 +25,24 @@ const features = [
     title: 'Augmentez votre productivité',
     description:
       "Accédez à un large catalogue de modèles et générez vos documents RH en quelques minutes grâce à un éditeur et des formulaires intelligents.",
-    accent: 'bg-amber-50 text-amber-600',
-    accentHover: 'group-hover:bg-amber-500',
+    accent: 'bg-accent-50 text-accent-600',
+    accentHover: 'group-hover:bg-accent-500',
   },
   {
     icon: ShieldCheck,
     title: 'Sécurisez vos documents',
     description:
       "Soyez alerté en temps réel des non-conformités légales et conventionnelles, avec des guides et conseils pour la rédaction de vos clauses.",
-    accent: 'bg-emerald-50 text-emerald-600',
-    accentHover: 'group-hover:bg-emerald-500',
+    accent: 'bg-success-50 text-success-600',
+    accentHover: 'group-hover:bg-success-500',
   },
   {
     icon: Upload,
     title: 'Importez vos propres modèles',
     description:
       "Intégrez vos templates propriétaires et paramétrez vos contrôles de conformité pour exploiter toute la puissance d'Oppus sur vos contenus.",
-    accent: 'bg-indigo-50 text-indigo-600',
-    accentHover: 'group-hover:bg-indigo-500',
+    accent: 'bg-brand-50 text-brand-600',
+    accentHover: 'group-hover:bg-brand-600',
   },
 ]
 
@@ -51,9 +51,9 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        {/* halos animés */}
-        <div className="pointer-events-none absolute -left-24 top-10 -z-10 h-72 w-72 rounded-full bg-brand-300/30 blur-3xl animate-blob" />
-        <div className="pointer-events-none absolute right-0 top-40 -z-10 h-80 w-80 rounded-full bg-indigo-300/30 blur-3xl animate-blob [animation-delay:-4s]" />
+        {/* Atmosphère : halo de marque + texture de points (sans blobs animés) */}
+        <div className="pointer-events-none absolute inset-0 -z-10 mesh-aura" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[28rem] dot-grid opacity-60 [mask-image:linear-gradient(to_bottom,black,transparent)]" />
 
         <div className="container-page grid items-center gap-12 py-20 lg:grid-cols-2 lg:py-28">
           <div>
@@ -61,7 +61,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="eyebrow"
+              className="eyebrow-pill"
             >
               <BadgeCheck className="h-3.5 w-3.5" />
               Gestion documentaire RH
@@ -71,7 +71,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.05 }}
-              className="mt-5 text-4xl font-extrabold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl"
+              className="mt-5 text-4xl font-bold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-6xl"
             >
               Passez à la vitesse supérieure,{' '}
               <span className="text-gradient">en toute sécurité</span>
@@ -96,7 +96,7 @@ export default function Home() {
             >
               <Button to="/contact">
                 Demander une démo
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5" />
               </Button>
               <Button to="/expert" variant="outline">
                 Découvrir nos solutions
@@ -119,20 +119,26 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="relative"
           >
-            <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-brand-200/60 to-indigo-200/50 blur-2xl" />
-            <img
-              src="/assets/feature-1.png"
-              alt="Éditeur Oppus : rédaction d'un contrat de travail avec clausier intelligent"
-              className="w-full rounded-2xl border border-slate-100 shadow-soft"
-            />
-            <div className="absolute -bottom-5 -left-4 flex animate-float items-center gap-2 rounded-xl bg-white px-4 py-3 shadow-card">
-              <Clock className="h-5 w-5 text-brand-600" />
+            <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-brand-200/60 to-brand-100/40 blur-2xl" />
+            <div className="frame overflow-hidden p-2">
+              <img
+                src="/assets/feature-1.png"
+                alt="Éditeur Oppus : rédaction d'un contrat de travail avec clausier intelligent"
+                className="w-full rounded-xl"
+              />
+            </div>
+            <div className="absolute -bottom-5 -left-4 flex animate-float items-center gap-2 rounded-2xl bg-white px-4 py-3 shadow-card ring-1 ring-brand-900/5">
+              <span className="grid h-7 w-7 place-items-center rounded-full bg-accent-50 text-accent-600">
+                <Clock className="h-4 w-4" />
+              </span>
               <span className="text-sm font-semibold text-ink">
                 Généré en 3 min
               </span>
             </div>
-            <div className="absolute -right-3 top-6 flex animate-float items-center gap-2 rounded-xl bg-white px-4 py-3 shadow-card [animation-delay:-3s]">
-              <ShieldCheck className="h-5 w-5 text-emerald-500" />
+            <div className="absolute -right-3 top-6 flex animate-float items-center gap-2 rounded-2xl bg-white px-4 py-3 shadow-card ring-1 ring-brand-900/5 [animation-delay:-3s]">
+              <span className="grid h-7 w-7 place-items-center rounded-full bg-success-50 text-success-600">
+                <ShieldCheck className="h-4 w-4" />
+              </span>
               <span className="text-sm font-semibold text-ink">Conforme</span>
             </div>
           </motion.div>
@@ -140,7 +146,7 @@ export default function Home() {
 
         {/* Marquee des types de documents */}
         <div className="container-page pb-10">
-          <p className="mb-3 text-center text-sm font-medium uppercase tracking-wide text-ink-muted">
+          <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-ink-muted">
             Tous vos documents RH, prêts à l'emploi
           </p>
           <Marquee items={documentTypes} />
@@ -173,49 +179,56 @@ export default function Home() {
 
       {/* Statistiques animées */}
       <Section className="container-page mt-20">
-        <div className="grid gap-6 rounded-3xl border border-slate-100 bg-gradient-to-br from-brand-50 via-white to-indigo-50 p-8 sm:grid-cols-3 sm:p-10">
+        <div className="grid gap-8 overflow-hidden rounded-[2rem] border border-brand-900/5 bg-white p-8 shadow-card sm:grid-cols-3 sm:p-12">
           {keyStats.map((stat) => (
-            <div key={stat.label} className="text-center sm:text-left">
+            <div
+              key={stat.label}
+              className="text-center sm:border-r sm:border-brand-900/5 sm:text-left sm:last:border-r-0"
+            >
               <Counter
                 value={stat.value}
                 suffix={stat.suffix}
-                className="text-4xl font-extrabold tracking-tight text-gradient sm:text-5xl"
+                className="text-4xl font-bold tracking-tight text-gradient sm:text-5xl"
               />
-              <div className="mt-2 text-ink-muted">{stat.label}</div>
+              <div className="mt-2 text-sm leading-relaxed text-ink-muted">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>
       </Section>
 
-      {/* Conventions collectives */}
+      {/* Conventions collectives — section sombre immersive */}
       <Section className="container-page mt-20">
-        <div className="grid items-center gap-10 rounded-3xl bg-ink p-8 text-white sm:p-12 lg:grid-cols-2">
-          <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-200">
+        <div className="relative grid items-center gap-10 overflow-hidden rounded-[2rem] bg-brand-night p-8 text-white shadow-soft sm:p-12 lg:grid-cols-2">
+          <div className="pointer-events-none absolute inset-0 dot-grid-light opacity-50" />
+          <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand-400/20 blur-3xl" />
+          <div className="relative">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-brand-100 ring-1 ring-white/15">
               <Sparkles className="h-3.5 w-3.5" />
               Conformité
             </span>
             <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
               Plus de 450 conventions collectives à portée de main
             </h2>
-            <p className="mt-4 text-lg leading-relaxed text-slate-300">
+            <p className="mt-4 text-lg leading-relaxed text-brand-100/85">
               Des synthèses couvrant l'ensemble des thèmes pour garantir la
               conformité de vos documents. L'information pertinente s'affiche
               directement pendant la rédaction.
             </p>
             <Button
               to="/contact"
-              className="mt-8 bg-white text-brand-700 hover:bg-brand-50"
+              className="mt-8 bg-white text-brand-700 shadow-none hover:bg-brand-50"
             >
               Demander une démo
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5" />
             </Button>
           </div>
           <img
             src="/assets/benefit-4.png"
             alt="450 conventions collectives couvrant tous les secteurs d'activité"
             loading="lazy"
-            className="mx-auto w-full max-w-xs animate-float"
+            className="relative mx-auto w-full max-w-xs animate-float"
           />
         </div>
       </Section>
@@ -275,16 +288,16 @@ function SolutionCard({
   cta,
 }: SolutionCardProps) {
   return (
-    <div className="group flex flex-col rounded-2xl border border-slate-100 bg-white p-8 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-soft">
-      <div className="grid h-12 w-12 place-items-center rounded-xl bg-brand-600 text-white">
+    <div className="group flex flex-col rounded-3xl border border-brand-900/5 bg-white p-8 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card-hover">
+      <div className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-[0_10px_24px_-10px_rgba(37,103,164,0.8)]">
         <Icon className="h-6 w-6" />
       </div>
-      <span className="mt-5 text-sm font-semibold uppercase tracking-wide text-brand-600">
+      <span className="mt-5 text-xs font-semibold uppercase tracking-[0.14em] text-brand-600">
         {tag}
       </span>
       <h3 className="mt-2 text-2xl font-bold text-ink">{title}</h3>
       <p className="mt-3 flex-1 leading-relaxed text-ink-muted">{description}</p>
-      <Button to={to} variant="ghost" className="mt-6 self-start px-0">
+      <Button to={to} variant="ghost" className="mt-6 self-start px-0 hover:bg-transparent">
         {cta}
         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
       </Button>

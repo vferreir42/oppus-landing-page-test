@@ -13,23 +13,24 @@ export default function CtaBand({
 }: CtaBandProps) {
   return (
     <Section className="container-page mt-24">
-      <div className="relative overflow-hidden rounded-3xl bg-brand-900 px-8 py-14 text-center sm:px-16 sm:py-20">
-        <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-brand-600/40 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-20 -left-10 h-64 w-64 rounded-full bg-brand-500/30 blur-3xl" />
+      <div className="relative overflow-hidden rounded-[2rem] bg-brand-night px-8 py-14 text-center shadow-soft sm:px-16 sm:py-20">
+        <div className="pointer-events-none absolute inset-0 dot-grid-light opacity-60" />
+        <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-brand-400/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-accent-500/15 blur-3xl" />
         <div className="relative">
           <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
             {title}
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-brand-100">
+          <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-brand-100/90">
             {subtitle}
           </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button
               to="/contact"
-              className="bg-white text-brand-700 hover:bg-brand-50"
+              className="bg-white text-brand-700 shadow-none hover:bg-brand-50"
             >
               Demander une démo
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5" />
             </Button>
             <Button
               href="mailto:contact@oppus.fr"

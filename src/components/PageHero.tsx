@@ -32,7 +32,7 @@ export default function PageHero({
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.05 }}
-        className="mt-5 max-w-2xl text-4xl font-extrabold leading-[1.1] tracking-tight text-ink sm:text-5xl"
+        className="mt-5 max-w-2xl text-4xl font-bold leading-[1.08] tracking-tight text-ink sm:text-5xl"
       >
         {title}
       </motion.h1>
@@ -50,8 +50,8 @@ export default function PageHero({
 
   return (
     <section className="relative overflow-hidden">
-      <div className="pointer-events-none absolute -left-24 top-0 -z-10 h-72 w-72 rounded-full bg-brand-300/25 blur-3xl animate-blob" />
-      <div className="pointer-events-none absolute right-0 top-24 -z-10 h-72 w-72 rounded-full bg-indigo-300/25 blur-3xl animate-blob [animation-delay:-5s]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 mesh-aura" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-72 dot-grid opacity-60 [mask-image:linear-gradient(to_bottom,black,transparent)]" />
 
       {image ? (
         <div className="container-page grid items-center gap-12 py-20 lg:grid-cols-2 lg:py-24">
@@ -62,11 +62,8 @@ export default function PageHero({
             transition={{ duration: 0.7, delay: 0.1 }}
             className="relative"
           >
-            <img
-              src={image}
-              alt={imageAlt}
-              className="mx-auto w-full max-w-md"
-            />
+            <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-brand-200/50 to-brand-100/30 blur-2xl" />
+            <img src={image} alt={imageAlt} className="mx-auto w-full max-w-md" />
           </motion.div>
         </div>
       ) : (

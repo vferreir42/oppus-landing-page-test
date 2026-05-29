@@ -5,7 +5,7 @@ import PageHero from '../components/PageHero'
 import Section from '../components/Section'
 
 const inputClass =
-  'mt-1.5 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-ink outline-none transition focus:border-brand-400 focus:ring-2 focus:ring-brand-100'
+  'mt-1.5 w-full rounded-xl border border-brand-900/10 bg-surface-soft px-4 py-3 text-ink outline-none transition focus:border-brand-400 focus:bg-white focus:ring-2 focus:ring-brand-200'
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
@@ -22,7 +22,7 @@ export default function Contact() {
         eyebrow="Contact"
         title={
           <>
-            Être <span className="text-brand-600">recontacté</span>
+            Être <span className="text-gradient">recontacté</span>
           </>
         }
         lead="Laissez-nous vos coordonnées : notre équipe vous recontacte rapidement pour organiser une démo personnalisée d'Oppus."
@@ -31,7 +31,7 @@ export default function Contact() {
       <Section className="container-page mt-12">
         <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr]">
           {/* Formulaire */}
-          <div className="rounded-2xl border border-slate-100 bg-white p-7 shadow-card sm:p-9">
+          <div className="rounded-3xl border border-brand-900/5 bg-white p-7 shadow-card sm:p-9">
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-12 text-center">
                 <CheckCircle2 className="h-14 w-14 text-green-500" />
@@ -154,7 +154,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="inline-flex w-full items-center justify-center rounded-xl bg-brand-600 px-5 py-3 text-sm font-semibold text-white shadow-soft transition-all hover:-translate-y-0.5 hover:bg-brand-700 sm:w-auto"
+                  className="inline-flex w-full items-center justify-center rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-soft transition-all hover:-translate-y-0.5 hover:bg-brand-700 sm:w-auto"
                 >
                   Être recontacté
                 </button>
@@ -164,7 +164,7 @@ export default function Contact() {
 
           {/* Coordonnées */}
           <div className="space-y-4">
-            <div className="rounded-2xl border border-slate-100 bg-slate-50/70 p-7">
+            <div className="rounded-3xl border border-brand-900/5 bg-white p-7 shadow-card">
               <h3 className="text-lg font-bold text-ink">Nos coordonnées</h3>
               <ul className="mt-5 space-y-4 text-ink-soft">
                 <li className="flex items-start gap-3">
@@ -186,12 +186,13 @@ export default function Contact() {
                 </li>
               </ul>
             </div>
-            <div className="rounded-2xl bg-brand-900 p-7 text-brand-100">
-              <p className="text-sm">
+            <div className="relative overflow-hidden rounded-3xl bg-brand-night p-7 text-brand-100 shadow-soft">
+              <div className="pointer-events-none absolute inset-0 dot-grid-light opacity-50" />
+              <p className="relative text-sm leading-relaxed text-brand-100/85">
                 Oppus s'associe au leader européen de l'édition juridique pour
                 vous proposer un contenu juridique d'excellence.
               </p>
-              <p className="mt-4 text-lg font-extrabold tracking-tight text-white">
+              <p className="relative mt-4 text-lg font-bold tracking-tight text-white">
                 Oppus by Lefebvre Dalloz
               </p>
             </div>

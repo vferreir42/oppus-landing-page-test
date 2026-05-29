@@ -4,35 +4,60 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Bleu de marque réel d'Oppus, ancré sur #2567A4 (rgb 37,103,164) en brand-600.
         brand: {
-          50: '#eff5ff',
-          100: '#dbe7fe',
-          200: '#bfd5fe',
-          300: '#93b8fd',
-          400: '#6090fa',
-          500: '#3b6bf5',
-          600: '#2563eb',
-          700: '#1d4fd0',
-          800: '#1e40af',
-          900: '#1e3a8a',
-          950: '#172554',
+          50: '#eef5fb',
+          100: '#d6e6f3',
+          200: '#aecde7',
+          300: '#7eaed6',
+          400: '#4d8bc0',
+          500: '#2f76b4',
+          600: '#2567a4',
+          700: '#1f5587',
+          800: '#1d476e',
+          900: '#1b3a59',
+          950: '#11263b',
+        },
+        // Accents repris de l'application (badges, succès, énergie).
+        accent: {
+          50: '#fff7ed',
+          100: '#ffedd5',
+          400: '#fbbf24',
+          500: '#f59e0b',
+          600: '#ea8a04',
+        },
+        success: {
+          50: '#ecfdf5',
+          100: '#d1fae5',
+          500: '#22c55e',
+          600: '#16a34a',
+        },
+        // Canvas clair légèrement teinté (façon dashboard) plutôt que blanc pur.
+        surface: {
+          DEFAULT: '#f6f8fb',
+          soft: '#fbfcfe',
         },
         ink: {
-          DEFAULT: '#0f172a',
-          soft: '#334155',
-          muted: '#64748b',
+          DEFAULT: '#0f1f33',
+          soft: '#34465c',
+          muted: '#6b7c92',
         },
       },
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        soft: '0 10px 40px -12px rgba(37, 99, 235, 0.18)',
-        card: '0 4px 24px -8px rgba(15, 23, 42, 0.12)',
+        // Ombres douces, diffuses et teintées bleu pour matcher les cartes de l'app.
+        soft: '0 24px 60px -24px rgba(37, 103, 164, 0.35)',
+        card: '0 12px 32px -16px rgba(27, 58, 89, 0.18)',
+        'card-hover': '0 28px 56px -24px rgba(37, 103, 164, 0.28)',
+        glow: '0 0 0 1px rgba(37, 103, 164, 0.06), 0 18px 48px -20px rgba(37, 103, 164, 0.40)',
       },
       backgroundImage: {
-        'hero-glow':
-          'radial-gradient(60% 60% at 50% 0%, rgba(59,107,245,0.18) 0%, rgba(255,255,255,0) 70%)',
+        'mesh-brand':
+          'radial-gradient(48% 60% at 18% 18%, rgba(37,103,164,0.18) 0%, rgba(37,103,164,0) 60%), radial-gradient(42% 52% at 82% 8%, rgba(125,174,214,0.22) 0%, rgba(125,174,214,0) 58%), radial-gradient(50% 60% at 60% 100%, rgba(245,158,11,0.10) 0%, rgba(245,158,11,0) 60%)',
+        'brand-night':
+          'linear-gradient(160deg, #1f5587 0%, #1b3a59 55%, #11263b 100%)',
       },
       keyframes: {
         'fade-up': {
@@ -45,19 +70,13 @@ export default {
         },
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-14px)' },
-        },
-        blob: {
-          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
-          '33%': { transform: 'translate(24px, -18px) scale(1.08)' },
-          '66%': { transform: 'translate(-18px, 14px) scale(0.96)' },
+          '50%': { transform: 'translateY(-10px)' },
         },
       },
       animation: {
         'fade-up': 'fade-up 0.6s ease-out forwards',
-        marquee: 'marquee 32s linear infinite',
-        float: 'float 6s ease-in-out infinite',
-        blob: 'blob 14s ease-in-out infinite',
+        marquee: 'marquee 36s linear infinite',
+        float: 'float 7s ease-in-out infinite',
       },
     },
   },
