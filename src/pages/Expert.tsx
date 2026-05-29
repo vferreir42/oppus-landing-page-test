@@ -90,7 +90,7 @@ export default function Expert() {
         <ImageRow
           eyebrow="Éditeur intelligent"
           title="Profitez d'un éditeur pensé pour les professionnels"
-          image="/assets/feature-3.png"
+          image="/assets/benefit-3.png"
           imageAlt="Éditeur Oppus avec formulaires intelligents"
           glow="from-brand-200/60 to-brand-100/40"
           reverse
