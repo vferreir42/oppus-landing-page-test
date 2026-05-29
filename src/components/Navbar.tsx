@@ -47,7 +47,10 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-2 md:flex">
+          <Button href="https://saas.oppus.fr/login" variant="outline" className="px-5 py-2.5">
+            Me connecter
+          </Button>
           <Button to="/contact" className="px-5 py-2.5">
             Demander une démo
             <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5" />
@@ -85,7 +88,10 @@ export default function Navbar() {
                 {link.label}
               </NavLink>
             ))}
-            <div className="mt-2">
+            <div className="mt-2 flex flex-col gap-2">
+              <Button href="https://saas.oppus.fr/login" variant="outline" className="w-full">
+                Me connecter
+              </Button>
               <Button to="/contact" className="w-full">
                 Demander une démo
                 <ArrowRight className="h-4 w-4" />
